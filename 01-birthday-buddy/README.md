@@ -1,26 +1,19 @@
-## Figma URL
-
-[Birthday Buddy](https://www.figma.com/file/e2vsLe9DMnXZIygNHkwGL1/Birthday-buddy?node-id=0%3A1&t=AGNWdO5QQGOoNCfD-1)
-
-## Steps
-
-- don't worry about CSS, checkout example image
 
 #### Import Data
 
-In App.jsx, import the data (from data.js) to be rendered as an array of objects. Each object should represent a person and contain properties such as name, age, and image URL.
+In App.jsx, import the data (from data.js) to be used as an array of objects. Each object should have properties like name, age, and image URL.
 
 #### Setup State Variable
 
-Then, set up the data as a state variable using the useState hook. This will allow the data to be modified and have those changes automatically reflected in the rendered output.
+Use the useState hook to store the data in a state variable, enabling modifications that will be automatically reflected in the UI.
 
 #### Iterate and Render
 
-Display the number of items in the list by using the length property of the state variable. This information can be displayed using plain text or added to a message or heading element.
+Use the length property of the state variable to display the number of people in the list. You can display this count in a message or heading element.
 
-To render the list of people, iterate over the data array using the map method. For each item in the array, render an image element (hint : use inline styles to make width smaller).Additionally, render the person's name and age as plain text.
+Use the map method to loop through the data array. For each person, render an image (with inline styles to reduce width) and display their name and age as plain text.
 
-Create a List component to hold the rendered items. This component can be a simple div element containing the list of Person components.
+Create a List component to hold the rendered list of people. This component should be a simple div containing multiple Person components.
 
 Create a Person component to render the information for each person. This component should receive the person data as props and render the image, name, and age information.
 
