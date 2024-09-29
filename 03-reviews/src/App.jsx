@@ -18,13 +18,25 @@ const App = () => {
     if (index > 0) setIndex(index - 1);
     else setIndex(data.length - 1);
   };
+  const randomPerson = () => {
+    let randomNumber = Math.floor(Math.random() * data.length);
+
+    if (randomNumber === index)
+      randomNumber = Math.floor(Math.random() * data.length);
+    setIndex(randomNumber);
+  };
 
   return (
     <>
       <main>
         <article className="review">
           <div className="img-container">
-            <img src={image} className="person-img" />
+            <img
+              src={image}
+              className="person-img"
+              alt="Picture of the person"
+              loading="lazy"
+            />
             <span className="quote-icon">
               <FaQuoteRight />
             </span>
@@ -40,6 +52,9 @@ const App = () => {
               <FaChevronCircleRight />
             </button>
           </div>
+          <button className="btn btn-hipster" onClick={randomPerson}>
+            Surprise Me
+          </button>
         </article>
       </main>
     </>
